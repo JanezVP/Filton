@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+            <meta charset="UTF-8">
+            <title>Seznam sporocil</title>
+    </head>
+
+    <body>
+            <h1>Seznam sporočil</h1>
+            <ul>
+            {% for sporocilo in sporocila %}
+                <li> <a href="/sporocila/{{sporocilo.key.id()}}">
+                    {{ sporocilo.avtor}};
+                    {{ sporocilo.besedilo_sporocila }};
+                    {{ sporocilo.email}}
+                    {{ sporocilo.poslano}}</a> </li>
+
+            {% endfor %}
+            </ul>
+    </body>
+</html>

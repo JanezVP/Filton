@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+    {% block title %}
+    Domov
+    {% endblock title %}
+
+{% block vsebina_strani %}
+    <h1>Filton GuestBook:</h1>
+    <form method="POST" action="/rezultat">
+        <label for="input-ime">Ime in priimek:</label>
+        <input name="ime" id="input-ime">
+        <br>
+        <label for="vpis-sporocila">Vpišite sporočilo:</label>
+        <input name="sporocilo" id="vpis-sporocila" type required>
+        <br>
+        <label for="input-stevilka">Email:</label>
+        <input name="email" id="input-stevilka"  >
+
+        <button type="submit">Pošlji</button>
+
+    </form>
+{% endblock vsebina_strani %}
